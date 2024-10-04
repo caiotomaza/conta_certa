@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Controle Financeiro Pessoal</title>
+    <link rel="shortcut icon" href="img/favicon.ico"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+<body class="fundo">
+    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+        <!-- Brand/logo -->
+        <a class="navbar-brand" href="index_adm.html">Controle Financeiro </a>
+    
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index_adm.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Usuário
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="perfil.html">Perfil</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Gerenciar Cadastros
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="categorias.html">Categorias</a>
+                  <a class="dropdown-item" href="contas.html">Contas</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="lancamentos.html">Lançamentos</a>
+            </li>
+        </ul>
+        <form class="form-inline navbar-nav">
+            <a class="nav-link" href="index.html" type="button"
+            onclick="sair()">Sair</a>
+        </form>
+    </nav>
+
+<div class="canto">
+
+    <div class="row">
+        <div class="col-lg-5">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="texto">
+                        Cadastro de Categorias
+                    </h3>
+                    <br>
+                    <h5 class="texto">
+                        Escolha um nome para sua categoria:
+                    </h5>
+                    <br>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="form1">
+                        <div class="row">
+                            <div class="form-group col-lg-12">
+                                <label>Nome:</label>
+                                <input type="text" id="nomeCat" class="form-control">
+                            </div>
+                        </div>
+                        <div id="botoes">
+                            <button class="btn btn-success" type="button"
+                            onclick="cadastrarCategoria()">Cadastrar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="col-lg-7">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h3 class="texto">Lista de Categorias</h3>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="display: none;">ID</th>
+                        <th>Nome</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<script src="js/categoria.js"></script>
+
+</body>
+</html>
