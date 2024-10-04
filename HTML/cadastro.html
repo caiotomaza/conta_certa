@@ -1,86 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <title>Controle Financeiro</title>
-    <link rel="shortcut icon" href="img/favicon.ico"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-    <link rel="stylesheet" href="css/main.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body class="fundo">
-
-<div class="canto">
-
-    <div class="row">
-        <div class="form-group col-2 col-lg-3"></div>
-
-        <div class="form-group col-8 col-lg-6 box-login">
-            <div>
-                <h3 class="texto">
-                    Crie sua conta
-                </h3>
-            </div>
-            <form name="form1">
-                <div class="row">
-                    <div class="form-group col-lg-8">
-                        <label class="texto">Nome:</label>
-                        <input type="text" id="nomeCad" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-4">
-                        <label class="texto">Telefone:</label>
-                        <input type="text" id="telefoneCad" class="form-control" maxlength="11">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label class="texto">E-mail:</label>
-                        <input type="email" id="emailCad" class="form-control" placeholder="email@email.com.br">
-                    </div>
-                    <div class="form-group col-lg-6">
-                        <label class="texto">Senha:</label>
-                        <input type="password" id="senhaCad" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-3">
-                        <label class="texto">CEP:</label>
-                        <input type="text" id="cepCad" class="form-control" maxlength="9">
-                    </div>
-                    <div class="form-group col-lg-7">
-                        <label class="texto">Endereço:</label>
-                        <input type="text" id="enderecoCad" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-2">
-                        <label class="texto">Número:</label>
-                        <input type="number" id="numEnderecoCad" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-7">
-                        <label class="texto">Cidade:</label>
-                        <input type="text" id="cidadeCad" class="form-control">
-                    </div>
-                    <div class="form-group col-lg-5">
-                        <label class="texto">Estado:</label>
-                        <input type="text" id="estadoCad" class="form-control">
-                    </div>
-                </div>
-                <div class="botoes">
-                    <button class="btn btn-success" type="button"
-                    onclick="cadUsuario()">Cadastrar
-                    </button>
-                    <a class="btn btn-outline-danger" href="index.html">Voltar</a>
-                </div>
+<body>
+    <div id="notification" class="notification"></div>
+    <div class="container" id="container">
+        <!-- Tela de Login -->
+        <div class="form-container sign-in-container">
+            <form id="loginForm">
+                <h1>Login</h1>
+                <input type="email" placeholder="Email" id="loginEmail" required />
+                <input type="password" placeholder="Senha" id="loginPassword" required />
+                <button type="submit">Entrar</button>
+                <a href="#" id="forgotPassword">Esqueceu a senha?</a>
+                <a href="#" id="register">Criar conta</a>
             </form>
         </div>
-
-        <div class="form-group col-2 col-lg-3"></div>
+        <!-- Tela de Cadastro -->
+        <div class="form-container sign-up-container">
+            <form id="registerForm">
+                <h1>Criar Conta</h1>
+                <input type="text" placeholder="Nome" id="registerName" required />
+                <input type="email" placeholder="Email" id="registerEmail" required />
+                <input type="password" placeholder="Senha" id="registerPassword" required />
+                <button type="submit">Registrar</button>
+                <a href="#" id="backToLogin">Já tenho conta</a>
+            </form>
+        </div>
+        <!-- Tela de Recuperação de Senha -->
+        <div class="form-container forgot-password-container">
+            <form id="forgotPasswordForm">
+                <h1>Recuperar Senha</h1>
+                <input type="email" placeholder="Email" id="forgotPasswordEmail" required />
+                <button type="submit">Enviar</button>
+                <a href="#" id="backToLoginFromForgot">Voltar para Login</a>
+            </form>
+        </div>
+        <!-- Tela de Usuário Logado -->
+        <div class="form-container logged-in-container">
+            <form id="loggedInForm">
+                <h1>Você está logado</h1>
+                <button type="button" id="logoutButton">Deslogar</button>
+                <button type="button" id="deleteAccountButton">Apagar conta</button>
+            </form>
+        </div>
     </div>
 
-</div>
-
-<script src="js/usuario.js"></script>
-
+    <script src="script.js"></script>
 </body>
-</html
+</html>
