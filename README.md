@@ -7,4 +7,4 @@ Este projeto foi desenvolvido no intuito de criar uma ferramenta que facilite a 
 * HTML, CSS E JS no front-end;
 * PHP e o HefestosPHP no back-end;
 * Mysql no database;
-* Docker.
+* Docker e Composer.
