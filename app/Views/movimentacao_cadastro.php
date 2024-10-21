@@ -1,4 +1,5 @@
 <div ng-include="'/commons/menu.html'"></div>
+//teste
 <div class="jumbotron">
     <div class="container">
         <h2>{{vm.title}}</h2>
