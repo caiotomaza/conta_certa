@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+//achar as img dos patrocinadores
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
